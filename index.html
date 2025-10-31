@@ -7,6 +7,55 @@
 		<link rel="icon" type="image/png" href="images/favicon.png">
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+		<style>
+    /* ----- Otomatik Kayan Şerit Stilleri ----- */
+    
+    /* Animasyonun kendisi */
+    @keyframes scroll {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); } /* Resimlerin 1 kopyası kadar sola kaydırır */
+    }
+
+    /* Kayan şeridin dış sarmalayıcısı */
+    .scroller-wrapper {
+        width: 100%;
+        overflow: hidden; /* Dışarı taşan resimleri gizler */
+        /* Kenarlara yumuşak solma efekti verir */
+        mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to right, transparent 0%, black 15%, black 85%, transparent 100%);
+    }
+
+    /* Resimleri tutan ve hareket eden iç sarmalayıcı */
+    .scroller-inner {
+        display: flex; /* Resimleri yan yana dizer */
+        width: fit-content; /* İçerik kadar genişler */
+        animation: scroll 40s linear infinite; /* Animasyonu uygular (40s = hız) */
+    }
+
+    /* Her bir poster resmi */
+    .scroller-item {
+        width: 200px; /* Poster genişliği */
+        margin: 0 10px; /* Resimler arası boşluk */
+        border-radius: 8px; /* Yumuşak kenarlar */
+        overflow: hidden; /* Taşan köşeleri gizler */
+        box-shadow: 0 4px 10px rgba(0,0,0,0.3); /* Hafif gölge */
+    }
+
+    .scroller-item img {
+        width: 100%;
+        height: auto;
+        display: block;
+        aspect-ratio: 2 / 3; /* Film posteri en-boy oranı (2:3) */
+        object-fit: cover; /* Resmi sığdırır */
+    }
+
+    /* Farenle üzerine gelince animasyonu durdurur (isteğe bağlı) 
+    .scroller-wrapper:hover .scroller-inner {
+        animation-play-state: paused;
+    }*/
+</style>
+
 	</head>
 	<body class="is-preload">
 
@@ -39,28 +88,60 @@
 			</header>
 
 		<section id="one" class="wrapper style2 special">
-				<header class="major">
-					<h2>Movim'in Temel Özellikleri</h2>
-					<p>Yarım kalan drama filmlerinin tamamı burada...</p>
-				</header>
-				<ul class="icons major">
-					<li>
-						<span class="icon solid fa-cogs">
-							<span class="label">[Özellik 1 Adı]</span>
-						</span>
-					</li>
-					<li>
-						<span class="icon solid fa-bolt">
-							<span class="label">[Özellik 2 Adı]</span>
-						</span>
-					</li>
-					<li>
-						<span class="icon solid fa-shield-alt">
-							<span class="label">[Özellik 3 Adı]</span>
-						</span>
-					</li>
-				</ul>
-			</section>
+        <header class="major">
+            <h2>Movim'in Temel Özellikleri</h2>
+            <p>Yarım kalan drama filmlerinin tamamı burada...</p>
+        </header>
+        <ul class="icons major">
+            <li>
+                <span class="icon solid fa-cogs">
+                    <span class="label">[Özellik 1 Adı]</span>
+                </span>
+            </li>
+            <li>
+                <span class="icon solid fa-bolt">
+                    <span class="label">[Özellik 2 Adı]</span>
+                </span>
+            </li>
+            <li>
+                <span class="icon solid fa-shield-alt">
+                    <span class="label">[Özellik 3 Adı]</span>
+                </span>
+            </li>
+        </ul>
+
+        <div class="scroller-wrapper">
+            <div class="scroller-inner">
+                <div class="scroller-item"><img src="filmasset/film1.jpg" alt="Film 1"></div>
+                <div class="scroller-item"><img src="filmasset/film2.jpg" alt="Film 2"></div>
+                <div class="scroller-item"><img src="filmasset/film3.jpg" alt="Film 3"></div>
+                <div class="scroller-item"><img src="filmasset/film4.jpg" alt="Film 4"></div>
+                <div class="scroller-item"><img src="filmasset/film5.jpg" alt="Film 5"></div>
+                <div class="scroller-item"><img src="filmasset/film6.jpg" alt="Film 6"></div>
+                <div class="scroller-item"><img src="filmasset/film7.jpg" alt="Film 7"></div>
+				<div class="scroller-item"><img src="filmasset/film8.jpg" alt="Film 8"></div>
+                <div class="scroller-item"><img src="filmasset/film9.jpg" alt="Film 9"></div>
+                <div class="scroller-item"><img src="filmasset/film10.jpg" alt="Film 10"></div>
+                <div class="scroller-item"><img src="filmasset/film11.jpg" alt="Film 11"></div>
+                <div class="scroller-item"><img src="filmasset/film12.jpg" alt="Film 12"></div>
+                <div class="scroller-item"><img src="filmasset/film13.jpg" alt="Film 13"></div>
+
+                <div class="scroller-item"><img src="filmasset/film1.jpg" alt="Film 1"></div>
+                <div class="scroller-item"><img src="filmasset/film2.jpg" alt="Film 2"></div>
+                <div class="scroller-item"><img src="filmasset/film3.jpg" alt="Film 3"></div>
+                <div class="scroller-item"><img src="filmasset/film4.jpg" alt="Film 4"></div>
+                <div class="scroller-item"><img src="filmasset/film5.jpg" alt="Film 5"></div>
+                <div class="scroller-item"><img src="filmasset/film6.jpg" alt="Film 6"></div>
+                <div class="scroller-item"><img src="filmasset/film7.jpg" alt="Film 7"></div>
+				<div class="scroller-item"><img src="filmasset/film8.jpg" alt="Film 8"></div>
+                <div class="scroller-item"><img src="filmasset/film9.jpg" alt="Film 9"></div>
+                <div class="scroller-item"><img src="filmasset/film10.jpg" alt="Film 10"></div>
+                <div class="scroller-item"><img src="filmasset/film11.jpg" alt="Film 11"></div>
+                <div class="scroller-item"><img src="filmasset/film12.jpg" alt="Film 12"></div>
+                <div class="scroller-item"><img src="filmasset/film13.jpg" alt="Film 13"></div>
+            </div>
+        </div>
+        </section>
 
 		<section id="two" class="wrapper">
 				<div class="inner alt">
