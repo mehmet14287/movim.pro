@@ -49,6 +49,23 @@
 }
 
 
+/* ----- Resim Koruması (Caydırıcı) ----- */
+.scroller-item img {
+    /* Resmin üzerine tıklama/dokunma olaylarını iptal eder */
+    pointer-events: none;
+    
+    /* Resmin seçilmesini veya kopyalanmasını engeller */
+    user-select: none;
+    -webkit-user-select: none; /* Safari için */
+    -moz-user-select: none; /* Firefox için */
+    
+    /* Resmin sürüklenmesini engeller */
+    -webkit-user-drag: none;
+}
+
+
+
+			
 			
     /* ----- Otomatik Kayan Şerit Stilleri ----- */
     
@@ -236,6 +253,7 @@
 
 	</body>
 </html>
+
 
 
 
