@@ -9,6 +9,47 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 
 		<style>
+
+/* Bu kodları <head> içindeki <style> bloğunuza ekleyin veya güncelleyin */
+
+/* ----- WhatsApp Floating Action Button (FAB) ----- */
+.whatsapp-bubble {
+    position: fixed;            /* Sayfayla kaymaz, sabit kalır */
+    bottom: 30px;               /* Alttan 30px boşluk */
+    right: 30px;                /* Sağdan 30px boşluk */
+    width: 70px;                /* Daha büyük genişlik */
+    height: 70px;               /* Daha büyük yükseklik */
+    background-color: #25D366;  /* WhatsApp yeşili */
+    color: #FFF;                /* İkon rengi (Beyaz) */
+    border-radius: 50%;         /* Tamamen yuvarlak yapar */
+    box-shadow: 0 6px 16px rgba(0,0,0,0.3); /* Daha belirgin gölge */
+    z-index: 1000;              /* Diğer her şeyin üstünde */
+    transition: all 0.2s ease-in-out; /* Yumuşak animasyon */
+    
+    /* Flexbox ile ikonu mükemmel ortalama */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Metin seçilebilirliğini kapat, sadece ikon odaklı olsun */
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+.whatsapp-bubble i {
+    font-size: 38px; /* İkonun büyüklüğü - daha büyük */
+    line-height: 1; /* İkonun dikey hizalamasını düzeltir */
+}
+
+/* Üzerine gelince daha belirgin hale gelsin */
+.whatsapp-bubble:hover {
+    transform: scale(1.12) translateY(-3px); /* Biraz büyüt ve hafifçe yukarı kalksın */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4); /* Gölgeyi daha da belirginleştir */
+    background-color: #1DA851; /* Hafif koyu yeşil */
+}
+
+
+			
     /* ----- Otomatik Kayan Şerit Stilleri ----- */
     
     /* Animasyonun kendisi */
@@ -195,6 +236,7 @@
 
 	</body>
 </html>
+
 
 
 
