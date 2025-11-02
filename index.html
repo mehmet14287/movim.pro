@@ -193,52 +193,9 @@
     <i class="icon brands fa-whatsapp"></i>
 </a>
 
-<script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/main.js"></script>
-
-</body> ```
-
----
-
-### 2. Adım: CSS Kodunu `<head>` İçine Ekleme
-
-Bu baloncuğun stilini (rengini, yerini, yuvarlaklığını) belirlemek için aşağıdaki **CSS** kodunu kopyalayın ve `index.html` dosyanızdaki `<head>` bölümünün içindeki `<style>...</style>` bloğunuza ekleyin. (Otomatik kayan şerit için eklediğimiz yerin içine veya sonuna ekleyebilirsiniz).
-
-```css
-/* Bu kodları <head> içindeki <style> bloğunuza ekleyin */
-
-/* ----- WhatsApp Canlı Destek Baloncuğu ----- */
-.whatsapp-bubble {
-    position: fixed;            /* Sayfayla kaymaz, sabit kalır */
-    bottom: 25px;               /* Alttan 25px boşluk */
-    right: 25px;                /* Sağdan 25px boşluk */
-    width: 60px;                /* Genişlik */
-    height: 60px;               /* Yükseklik */
-    background-color: #25D366;  /* WhatsApp yeşili */
-    color: #FFF;                /* İkon rengi (Beyaz) */
-    border-radius: 50%;         /* Tamamen yuvarlak yapar */
-    box-shadow: 0 4px 12px rgba(0,0,0,0.2); /* Hafif gölge */
-    z-index: 1000;              /* Diğer her şeyin üstünde */
-    transition: transform 0.2s ease; /* Yumuşak animasyon */
-    
-    /* Flexbox ile ikonu mükemmel ortalama */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.whatsapp-bubble i {
-    font-size: 30px; /* İkonun büyüklüğü */
-}
-
-/* Üzerine gelince hafifçe büyüsün */
-.whatsapp-bubble:hover {
-    transform: scale(1.08); /* Biraz büyüt */
-    box-shadow: 0 6px 16px rgba(0,0,0,0.3);
-}
-
 	</body>
 </html>
+
 
 
 
