@@ -4,6 +4,7 @@
 	Fractal by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+
 */
 
 html, body, div, span, applet, object,
@@ -17,6 +18,88 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
+	/* ----- Duyuru Çubuğu Stilleri ----- */
+.announcement-container {
+    background: linear-gradient(90deg, #ff4b2b, #ff416c); /* Dikkat çekici gradyan */
+    color: #fff;
+    padding: 10px 20px;
+    position: relative;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+    font-family: Arial, sans-serif;
+}
+
+.announcement-content {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 1200px;
+}
+
+.announcement-text {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+.badge {
+    background: #fff;
+    color: #ff4b2b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 11px;
+}
+
+.announcement-button {
+    background: #fff;
+    color: #ff4b2b !important;
+    padding: 5px 15px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 13px;
+    transition: 0.3s;
+    white-space: nowrap;
+}
+
+.announcement-button:hover {
+    transform: scale(1.05);
+    background: #f0f0f0;
+}
+
+.close-announcement {
+    position: absolute;
+    right: 15px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+    line-height: 1;
+}
+
+/* Mobil Düzenlemeler */
+@media screen and (max-width: 736px) {
+    .announcement-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 8px;
+        padding-right: 25px; /* Kapatma butonu için yer */
+    }
+    
+    .announcement-text {
+        font-size: 12px;
+    }
+
+    .badge {
+        display: none; /* Mobilde yer kazanmak için badge gizlenebilir */
+    }
+}
 	margin: 0;
 	padding: 0;
 	border: 0;
